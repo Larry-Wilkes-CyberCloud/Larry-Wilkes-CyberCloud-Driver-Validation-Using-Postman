@@ -4,6 +4,16 @@
   <p>
     As a Quality Assurance Engineer at General Insurance INC., I tested and validated the Driver Validation API. Below are the results of the key test cases executed to ensure the API's robustness and reliability.
   </p>
+
+  <h3>Test Case Outline:</h3>
+  <ol>
+    <li><strong>Test Case ID: TC01</strong> - Verify the successful creation of a driver record with all required and optional fields provided with valid data.</li>
+    <li><strong>Test Case ID: TC02</strong> - Verify the system's response when attempting to create a driver record with a duplicated SSN, which should be unique.</li>
+    <li><strong>Test Case ID: TC03</strong> - Verify that the API properly handles and rejects creation when a mandatory field (e.g., 'lastname') is missing.</li>
+    <li><strong>Test Case ID: TC04</strong> - Verify the system's response when a non-existent driver ID is queried.</li>
+    <li><strong>Test Case ID: TC05</strong> - Test the API's ability to handle invalid date formats in fields like 'dob'. Valid formats: YYYY-MM-DD, YY/MM/DD.</li>
+  </ol>
+  
   <h3>Test Case Results:</h3>
   
   <!-- Test Case 1 -->
@@ -183,11 +193,13 @@
         <td>API returns an error status and a message detailing the incorrect date format, specifying the expected format.</td>
         <td>API did not return an error status and a message detailing the incorrect date format, specifying the expected format. This Endpoint has a Defect. Will report issue.</td>
         <td>Status code 201 received.</td>
-      </tr>
+     
+
+ </tr>
       <tr>
         <td colspan="4"><img src="https://github.com/Larry-Wilkes-CyberCloud/Larry-Wilkes-CyberCloud-Driver-Validation-Using-Postman-/assets/93053015/f92f9427-593c-434e-97d5-552050855d09" width="1000" height="500"></td>
       </tr>
     </tbody>
   </table>
+  <br>
 </div>
-
